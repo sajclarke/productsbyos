@@ -127,7 +127,7 @@
             <!-- / .row -->
 
             <div class="row justify-content-center">
-                {% for item in products %}
+                {% for item in products.slice(0, 3) %}
                     <div class="col-lg-4 col-sm-6 col-md-6">
                         <div class="process-block">
                             <img src="{{item.photo}}" alt="" class="img-fluid">
@@ -150,7 +150,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="section-heading">
-                            <h1 class="text-white">O’s is a family run business, managed by Mrs. Louisien-Stoute. It first started as a home based business, but has gradually developed into a factory run operation.
+                            <h1 class="text-white">O’s is a family-run business, managed by Mrs. Louisien-Stoute. It first started as a home based business, but has gradually developed into a factory run operation.
                             </h1>
                         </div>
                     </div>
