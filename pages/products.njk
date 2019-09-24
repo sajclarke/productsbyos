@@ -20,92 +20,22 @@
     <section id="work" class="section-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 p-0">
-                    <div class="work-block">
-                        <img src="assets/img/work/10.jpg" alt="work-img" class="img-fluid">
-                        <div class="overlay-content-block">
-                            <h4>Probiz portfolio template</h4>
-                            <p>Web Development</p>
-                            <a href="single-project.html">
-                                <i class="fa fa-link"></i>
-                            </a>
+                {% for item in products %}
+                    <div class="col-lg-4 col-md-6 p-0">
+                        <div class="work-block">
+                            <img src="{{item.photo}}" alt="work-img" class="img-fluid">
+                            <div class="overlay-content-block">
+                                <h4>{{item.title}}</h4>
+                                {# <p>Web Development</p>
+                                <a href="single-project.html">
+                                    <i class="fa fa-link"></i>
+                                </a> #}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 p-0">
-                    <div class="work-block">
-                        <img src="assets/img/work/11.jpg" alt="work-img" class="img-fluid">
-                        <div class="overlay-content-block">
-                            <h4>Probiz portfolio template</h4>
-                            <p>Web Development</p>
-                            <a href="single-project.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 p-0">
-                    <div class="work-block">
-                        <img src="assets/img/work/12.jpg" alt="work-img" class="img-fluid">
-                        <div class="overlay-content-block">
-                            <h4>Probiz portfolio template</h4>
-                            <p>Web Development</p>
-                            <a href="single-project.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    {% endfor%}
 
-                <div class="col-lg-3 col-md-6 p-0">
-                    <div class="work-block">
-                        <img src="assets/img/work/15.jpg" alt="work-img" class="img-fluid">
-                        <div class="overlay-content-block">
-                            <h4>Probiz portfolio template</h4>
-                            <p>Web Development</p>
-                            <a href="single-project.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 p-0">
-                    <div class="work-block">
-                        <img src="assets/img/work/14.jpg" alt="work-img" class="img-fluid">
-                        <div class="overlay-content-block">
-                            <h4>Probiz portfolio template</h4>
-                            <p>Web Development</p>
-                            <a href="single-project.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 p-0">
-                    <div class="work-block">
-                        <img src="assets/img/work/11.jpg" alt="work-img" class="img-fluid">
-                        <div class="overlay-content-block">
-                            <h4>Probiz portfolio template</h4>
-                            <p>Web Development</p>
-                            <a href="single-project.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 p-0">
-                    <div class="work-block">
-                        <img src="assets/img/work/10.jpg" alt="work-img" class="img-fluid">
-                        <div class="overlay-content-block">
-                            <h4>Probiz portfolio template</h4>
-                            <p>Web Development</p>
-                            <a href="single-project.html">
-                                <i class="fa fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-{% endblock %}
+        </section>
+    {% endblock %}

@@ -127,279 +127,143 @@
             <!-- / .row -->
 
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <div class="process-block">
-                        <img src="assets/img/process/process-1.jpg" alt="" class="img-fluid">
+                {% for item in products %}
+                    <div class="col-lg-4 col-sm-6 col-md-6">
+                        <div class="process-block">
+                            <img src="{{item.photo}}" alt="" class="img-fluid">
 
-                        <h3>Project Research</h3>
-                        <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <div class="process-block">
-                        <img src="assets/img/process/process-2.jpg" alt="" class="img-fluid">
-
-                        <h3>Project demostration</h3>
-                        <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6">
-                    <div class="process-block">
-                        <img src="assets/img/process/process-3.jpg" alt="" class="img-fluid">
-
-                        <h3>Development & delivery</h3>
-                        <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Web services ================================================== -->
-    {# <section class="section" id="services-2">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 text-center">
-                    <div class="section-heading">
-                        <!-- Heading -->
-                        <h2 class="section-title mb-2 text-white">
-                            Web Services
-                        </h2>
-
-                        <!-- Subheading -->
-                        <p class="mb-5 text-white">
-                            Rapoo can be used to create anything from a small marketing page to a sophisticated website.
-                        </p>
-                    </div>
-                </div>
-            </div> <!-- / .row -->
-
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <i class="ti-light-bulb"></i>
-                        <h3>Creative Design</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <i class="ti-desktop"></i>
-                        <h3>Web Development</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 mb-30">
-                    <div class="web-service-block">
-                        <i class="ti-announcement"></i>
-                        <h3>Digital Marketing</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <i class="ti-layers-alt"></i>
-                        <h3>Graphic Design</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <i class="ti-mobile"></i>
-                        <h3>App Development</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-md-6 ">
-                    <div class="web-service-block">
-                        <i class="ti-settings"></i>
-                        <h3>Wordpress Installation</h3>
-                        <p>Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had .</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> #}
-
-    <!-- Projects ================================================== -->
-
-    <section class="section" id="section-about">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-heading">
-                        <h1 class="text-white">O’s is a family run business, managed by Mrs. Louisien-Stoute. It first started as a home based business, but has gradually developed into a factory run operation.
-                        </h1>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="text-white">O’s has been in operation for over 13 years and has over 13 products and growing.</h3>
-                    <p class="lead text-white">Over the past six years, we have been launching a new product and have exhibited them at BMEX to get the public’s opinion, which we cherish very much as company. We try our best to give the customer what they are looking for and make it in a way that it is easy for them to use.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section-bottom">
-        <div class="container">
-            <div class="row justify-content-center">
-
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
-                    <div class="single-project">
-                        <img src="assets/img/projects/p-1.jpg" alt="" class="img-fluid">
-                        <div class="project-content">
-                            <h4>Project: onepage</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                            <h3>{{item.title}}</h3>
+                            {# <p>Nihil facere delectus eaque aut possimus nobis laudantium reprehenderit.</p> #}
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
-                    <div class="single-project">
-                        <img src="assets/img/projects/p-4.jpg" alt="" class="img-fluid">
-                        <div class="project-content">
-                            <h4>Project: business</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-8 ">
-                    <div class="single-project">
-                        <img src="assets/img/projects/p-3.jpg" alt="" class="img-fluid">
-                        <div class="project-content">
-                            <h4>Project : Marketing</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    {% endfor%}
 
-            <div class="row py-4">
-                <div class="col-lg-7 col-md-12 col-sm-12 ">
-                    <div class="single-project">
-                        <img src="assets/img/products/osproducts_sba_bestproduct.jpg" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 ">
-                    <div class="project-content-block">
-                        <h4>Did you know?</h4>
-                        <h2>We win Awards!</h2>
-                        <p>O's is an award-winning product! We were awarded the "Best Product" at the Small Business Association Awards</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LATEST BLOG ================================================== -->
-    <section class="section" id="blog">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 text-center">
-                    <div class="section-heading">
-                        <!-- Heading -->
-                        <h2 class="section-title">
-                            Read our latest news
-                        </h2>
-
-                        <!-- Subheading -->
-                        <p>
-                            Our duty towards you is to share our experience we're reaching in our work path with you.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- / .row -->
-
-            <div class="row justify-content-center">
-
-                {% for item in articles %}
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-box">
-                            <div class="blog-img-box">
-                                {% if item.photo == "" %}
-                                    <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid blog-img">
-                                {% else %}
-                                    <img src="{{item.photo}}" alt="" class="img-fluid blog-img">
-                                {% endif %}
-
-                            </div>
-                            <div class="single-blog">
-                                <div class="blog-content">
-                                    {# <h6>
-                                        17 October 2018</h6> #}
-                                    <a href="#">
-                                        <h3 class="card-title">{{item.title}}</h3>
-                                    </a>
-                                    <p>{{item.body}}</p>
-                                    <a href="#" class="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {# <hr> #}
-                    {%endfor%}
-                    {# <div class="col-lg-4 col-md-6">
-                        <div class="blog-box">
-                            <div class="blog-img-box">
-                                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid blog-img">
-                            </div>
-                            <div class="single-blog">
-                                <div class="blog-content">
-                                    <h6>
-                                        17 October 2018</h6>
-                                    <a href="#">
-                                        <h3 class="card-title">Top tips to speed up your site in a speedy time</h3>
-                                    </a>
-                                    <p>There are many variations of passages Lorem Ipsum available, but majority have ama suffered altratio. the lorem.</p>
-                                    <a href="#" class="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="blog-box">
-                            <div class="blog-img-box">
-                                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid blog-img">
-                            </div>
-                            <div class="single-blog">
-                                <div class="blog-content">
-                                    <h6>
-                                        17 October 2018</h6>
-                                    <a href="#">
-                                        <h3 class="card-title">Brand your site value with marketing strategies</h3>
-                                    </a>
-
-                                    <p>There are many variations of passages Lorem Ipsum available, but majority have ama suffered altratio. the lorem.</p>
-                                    <a href="#" class="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-8">
-                        <div class="blog-box">
-                            <div class="blog-img-box">
-                                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid blog-img">
-                            </div>
-                            <div class="single-blog">
-                                <div class="blog-content">
-                                    <h6>
-                                        17 October 2018</h6>
-                                    <a href="#">
-                                        <h3 class="card-title">Website Optimization is very essential for site speed</h3>
-                                    </a>
-                                    <p>There are many variations of passages Lorem Ipsum available, but majority have ama suffered altratio. the lorem.</p>
-                                    <a href="#" class="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> #}
                 </div>
             </div>
         </section>
 
-    {% endblock %}
+        <!-- Projects ================================================== -->
+
+        <section class="section" id="section-about">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-heading">
+                            <h1 class="text-white">O’s is a family run business, managed by Mrs. Louisien-Stoute. It first started as a home based business, but has gradually developed into a factory run operation.
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="text-white">O’s has been in operation for over 13 years and has over 13 products and growing.</h3>
+                        <p class="lead text-white">Over the past six years, we have been launching a new product and have exhibited them at BMEX to get the public’s opinion, which we cherish very much as company. We try our best to give the customer what they are looking for and make it in a way that it is easy for them to use.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-bottom">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
+                        <div class="single-project">
+                            <img src="assets/img/projects/p-1.jpg" alt="" class="img-fluid">
+                            <div class="project-content">
+                                <h4>Project: onepage</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
+                        <div class="single-project">
+                            <img src="assets/img/projects/p-4.jpg" alt="" class="img-fluid">
+                            <div class="project-content">
+                                <h4>Project: business</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8 ">
+                        <div class="single-project">
+                            <img src="assets/img/projects/p-3.jpg" alt="" class="img-fluid">
+                            <div class="project-content">
+                                <h4>Project : Marketing</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row py-4">
+                    <div class="col-lg-7 col-md-12 col-sm-12 ">
+                        <div class="single-project">
+                            <img src="assets/img/products/osproducts_sba_bestproduct.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 ">
+                        <div class="project-content-block">
+                            <h4>Did you know?</h4>
+                            <h2>We win Awards!</h2>
+                            <p>O's is an award-winning product! We were awarded the "Best Product" at the Small Business Association Awards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LATEST BLOG ================================================== -->
+        <section class="section" id="blog">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6 text-center">
+                        <div class="section-heading">
+                            <!-- Heading -->
+                            <h2 class="section-title">
+                                Read our latest news
+                            </h2>
+
+                            <!-- Subheading -->
+                            <p>
+                                Our duty towards you is to share our experience we're reaching in our work path with you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / .row -->
+
+                <div class="row justify-content-center">
+
+                    {% for item in articles %}
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog-box">
+                                <div class="blog-img-box">
+                                    {% if item.photo == "" %}
+                                        <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid blog-img">
+                                    {% else %}
+                                        <img src="{{item.photo}}" alt="" class="img-fluid blog-img">
+                                    {% endif %}
+
+                                </div>
+                                <div class="single-blog">
+                                    <div class="blog-content">
+                                        {# <h6>
+                                        17 October 2018</h6> #}
+                                        <a href="#">
+                                            <h3 class="card-title">{{item.title}}</h3>
+                                        </a>
+                                        <p>{{item.body}}</p>
+                                        <a href="#" class="read-more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {# <hr> #}
+                        {%endfor%}
+
+                    </div>
+                </div>
+            </section>
+
+        {% endblock %}
