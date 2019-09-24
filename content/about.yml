@@ -1,1 +1,34 @@
-{}
+mission: >-
+  At O's, we provide excellent customer service, and consistent high quality
+  products while providing healthy and delicious yet easy ways to prepare O's
+  foods.
+slogan: >-
+
+  O’s is a family-run business, managed by Mrs. Louisien-Stoute. It first
+  started as a home based business, but has gradually developed into a factory
+  run operation.
+background: >-
+  Over the past six years, we have been launching a new product and have
+  exhibited them at BMEX to get the public’s opinion, which we cherish very much
+  as company. We try our best to give the customer what they are looking for and
+  make it in a way that it is easy for them to use.
+owner:
+  bio: >-
+    A wife, a mother of four and now the grandmother of nine, Theophilia
+    Louisien-Stoute who is affectionately called Offee, is a true Caribbean
+    woman. Born in the beautiful island of st.lucia, married to a sweet guyanese
+    and living in breathtaking paradise Barbados. Her journey to Barbados was to
+    make a better life and to help her mother and five younger siblings, but
+    becoming a successful entrepreneur was far from her mind.
+  fullname: Theophilia Louisien-Stoute
+  photo: /assets/img/uploads/36706_1458559057304_2937282_n.jpg
+exhibits:
+  - location: BMEX 2014
+    name: Best Booth
+    photo: /assets/img/uploads/10441532_801216003236118_7058964105153804068_n.jpg
+  - location: BMEX
+    name: Our team
+    photo: /assets/img/uploads/10419420_801248689899516_8388582166320781405_n.jpg
+  - location: BMEX
+    name: Products Showcase
+    photo: /assets/img/uploads/1836902_748954688462250_1028045738_o.jpg
