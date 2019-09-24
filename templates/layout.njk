@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% include "partials/header.html" %}
+
+    <body class="top-header">
+        <div id="fb-root"></div>
+        <script async="async" defer="defer" crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=1530446347220958&autoLogAppEvents=1"></script>
+
+        {% include "partials/nav.html" %}
+
+        {% block content %}{% endblock %}
+
+        {% include "partials/footer.html" %}
+
+        <!-- Page Scroll to Top -->
+
+        <a class="scroll-to-top js-scroll-trigger" href=".top-header">
+            <i class="fa fa-angle-up"></i>
+        </a>
+
+        <!-- JAVASCRIPT ================================================== -->
+        <!-- Global JS -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+
+        <!-- Plugins JS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- Slick JS -->
+        <script src="assets/js/jquery.easing.1.3.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <!-- Theme JS -->
+        <script src="assets/js/theme.js"></script>
+        <script>
+
+            var items = [];
+            var products = [];
+            $.getJSON("/assets/data/articles.json", function (data) {
+
+                console.log(data);
+
+            });
+        </script>
+
+    </body>
+
+</html>
