@@ -23,12 +23,7 @@ gulp.task('render_content', function(cb) {
   gulp.src(['./assets/**/*']).pipe(gulp.dest('./build/assets/'));
   gulp.src(['pages/**/*.yml']).pipe(gulp.dest('./build/'));
 
-  //Render images
-  // gulp
-  //   .src("./assets/images/**/*")
-  //   .pipe(imagemin())
-  //   .pipe(gulp.dest("dist/assets/images"));
-
+  
   //Render nunjucks to html
   gulp
     .src('pages/**/*.+(html|njk)')
@@ -36,7 +31,7 @@ gulp.task('render_content', function(cb) {
 
     .pipe(
       data(function() {
-        var arr = [];
+        var posts = [];
         var folder = './posts';
 
         var files = fs.readdirSync(folder);
@@ -50,7 +45,7 @@ gulp.task('render_content', function(cb) {
           }
         });
 
-        var contents = { articles: arr };
+        var contents = { articles: posts };
         return contents;
       })
     )

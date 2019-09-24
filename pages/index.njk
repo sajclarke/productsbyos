@@ -118,7 +118,7 @@
 
                         <!-- Subheading -->
                         <p>
-                            Rapoo can be used to create anything from a small marketing page to a sophisticated website.
+                            A few of our products available in stores islandwide
                         </p>
 
                     </div>
@@ -224,17 +224,19 @@
 
     <!-- Projects ================================================== -->
 
-    <section class="section" id="projects-wrap">
+    <section class="section" id="section-about">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h1 class="text-white">We are trying to deliver 100% quality product and success their business to achieve ultimate goal.</h1>
+                        <h1 class="text-white">O’s is a family run business, managed by Mrs. Louisien-Stoute. It first started as a home based business, but has gradually developed into a factory run operation.
+                        </h1>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <p class="lead text-white">We are providing best service since 1990 to present , committed to best service delivery.Nullam metus enim, placerat in lacus vel, porttitor egestas libero. Etiam ex risus, feugiat eget accumsan eu, sagittis eu urna. In eget ultrices metus. Nunc accumsan
+                    <h3 class="text-white">O’s has been in operation for over 13 years and has over 13 products and growing.</h3>
+                    <p class="lead text-white">Over the past six years, we have been launching a new product and have exhibited them at BMEX to get the public’s opinion, which we cherish very much as company. We try our best to give the customer what they are looking for and make it in a way that it is easy for them to use.
                     </p>
                 </div>
             </div>
@@ -244,141 +246,102 @@
     <section id="projects" class="section-bottom">
         <div class="container">
             <div class="row justify-content-center">
-                {% for item in articles %}
-                    <div class="col-md-4">
 
-                        <div class="card my-5">
-                            <img class="card-img-top" src="{{item.photo}}"></img>
-                            <div class="card-body">
-                                <a href='#'>
-                                    <h5 class="card-title">{{item.title}}</h5>
-                                    <p class="card-text">
-                                        {{item.body}}
-                                    </p>
-                                </a>
+                <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
+                    <div class="single-project">
+                        <img src="assets/img/projects/p-1.jpg" alt="" class="img-fluid">
+                        <div class="project-content">
+                            <h4>Project: onepage</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
+                    <div class="single-project">
+                        <img src="assets/img/projects/p-4.jpg" alt="" class="img-fluid">
+                        <div class="project-content">
+                            <h4>Project: business</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8 ">
+                    <div class="single-project">
+                        <img src="assets/img/projects/p-3.jpg" alt="" class="img-fluid">
+                        <div class="project-content">
+                            <h4>Project : Marketing</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-4">
+                <div class="col-lg-7 col-md-12 col-sm-12 ">
+                    <div class="single-project">
+                        <img src="assets/img/products/osproducts_sba_bestproduct.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 ">
+                    <div class="project-content-block">
+                        <h4>Did you know?</h4>
+                        <h2>We win Awards!</h2>
+                        <p>O's is an award-winning product! We were awarded the "Best Product" at the Small Business Association Awards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST BLOG ================================================== -->
+    <section class="section" id="blog">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 text-center">
+                    <div class="section-heading">
+                        <!-- Heading -->
+                        <h2 class="section-title">
+                            Read our latest news
+                        </h2>
+
+                        <!-- Subheading -->
+                        <p>
+                            Our duty towards you is to share our experience we're reaching in our work path with you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- / .row -->
+
+            <div class="row justify-content-center">
+
+                {% for item in articles %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-box">
+                            <div class="blog-img-box">
+                                {% if item.photo == "" %}
+                                    <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid blog-img">
+                                {% else %}
+                                    <img src="{{item.photo}}" alt="" class="img-fluid blog-img">
+                                {% endif %}
+
+                            </div>
+                            <div class="single-blog">
+                                <div class="blog-content">
+                                    {# <h6>
+                                        17 October 2018</h6> #}
+                                    <a href="#">
+                                        <h3 class="card-title">{{item.title}}</h3>
+                                    </a>
+                                    <p>{{item.body}}</p>
+                                    <a href="#" class="read-more">Read More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {# <hr> #}
                     {%endfor%}
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
-                        <div class="single-project">
-                            <img src="assets/img/projects/p-1.jpg" alt="" class="img-fluid">
-                            <div class="project-content">
-                                <h4>Project: onepage</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-5">
-                        <div class="single-project">
-                            <img src="assets/img/projects/p-4.jpg" alt="" class="img-fluid">
-                            <div class="project-content">
-                                <h4>Project: business</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-8 ">
-                        <div class="single-project">
-                            <img src="assets/img/projects/p-3.jpg" alt="" class="img-fluid">
-                            <div class="project-content">
-                                <h4>Project : Marketing</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eligendi consequuntur veniam quod</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row py-4">
-                    <div class="col-lg-7 col-md-12 col-sm-12 ">
-                        <div class="single-project">
-                            <img src="assets/img/bg/banner_bg.jpg" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 ">
-                        <div class="project-content-block">
-                            <h4>Do you know who we are?</h4>
-                            <h2>More than just service your products...</h2>
-                            <p>Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and we will give you a complete account of the system.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TESTIMONIAL ================================================== -->
-        <section class="section" id="section-testimonial">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 col-sm-12 col-md-12">
-                        <div class="section-heading testimonial-heading">
-                            <h1>What they say
-                                <br>about us</h1>
-                            <p>Numquam doloribus impedit at consectetur molestiae tempora ratione possimus in veniam aperiam, eum consequuntur, unde. Earum ullam molestiae suscipit saepe sunt recusandae.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-sm-12 col-md-12">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="test-inner ">
-                                    <div class="test-author-thumb d-flex">
-                                        <img src="assets/img/client/test-1.jpg" alt="Testimonial author" class="img-fluid">
-                                        <div class="test-author-info">
-                                            <h4>Will Barrow</h4>
-                                            <h6>Sunrise Paradise Hotel</h6>
-                                        </div>
-                                    </div>
-
-                                    Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                    <i class="fa fa-quote-right"></i>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="test-inner ">
-                                    <div class="test-author-thumb d-flex">
-                                        <img src="assets/img/client/test-2.jpg" alt="Testimonial author" class="img-fluid">
-                                        <div class="test-author-info">
-                                            <h4>Will Barrow</h4>
-                                            <h6>Sunrise Paradise Hotel</h6>
-                                        </div>
-                                    </div>
-
-                                    Quas ut distinctio tenetur animi nihil rem, amet dolorum totam. Ab repudiandae tempore qui fugiat amet ipsa id omnis ipsam, laudantium! Dolorem.
-
-                                    <i class="fa fa-quote-right"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- LATEST BLOG ================================================== -->
-        <section class="section" id="blog">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-6 text-center">
-                        <div class="section-heading">
-                            <!-- Heading -->
-                            <h2 class="section-title">
-                                Read our latest news
-                            </h2>
-
-                            <!-- Subheading -->
-                            <p>
-                                Our duty towards you is to share our experience we're reaching in our work path with you.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- / .row -->
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6">
+                    {# <div class="col-lg-4 col-md-6">
                         <div class="blog-box">
                             <div class="blog-img-box">
                                 <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid blog-img">
@@ -434,7 +397,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> #}
                 </div>
             </div>
         </section>
