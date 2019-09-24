@@ -28,13 +28,12 @@ var findFiles = function(folder) {
     let fileStat = fs.statSync(folder + '/' + file).isDirectory();
     if (!fileStat) {
       if (file.includes('json')) {
-        arr.push(JSON.parse(fs.readFileSync('./posts/' + file)));
+        posts.push(JSON.parse(fs.readFileSync(folder + '/' + file)));
       }
     }
   });
 
-  var contents = { articles: posts };
-  return contents;
+  return posts;
 };
 
 gulp.task('render_content', function(cb) {
@@ -49,21 +48,7 @@ gulp.task('render_content', function(cb) {
 
     .pipe(
       data(function() {
-        var posts = [];
-        var postsfolder = './posts';
-
-        var postsfiles = fs.readdirSync(postsfolder);
-
-        postsfiles.forEach(file => {
-          let fileStat = fs.statSync(postsfolder + '/' + file).isDirectory();
-          if (!fileStat) {
-            if (file.includes('json')) {
-              arr.push(JSON.parse(fs.readFileSync('./posts/' + file)));
-            }
-          }
-        });
-
-        var contents = { articles: posts };
+        var contents = { articles: findFiles('./posts'), products: findFiles('./products') };
         return contents;
       })
     )
