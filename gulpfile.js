@@ -18,12 +18,30 @@ var manageEnvironment = function(env) {
   });
 };
 
+var findFiles = function(folder) {
+  var posts = [];
+  // var postsfolder = './posts';
+
+  var files = fs.readdirSync(folder);
+
+  files.forEach(file => {
+    let fileStat = fs.statSync(folder + '/' + file).isDirectory();
+    if (!fileStat) {
+      if (file.includes('json')) {
+        arr.push(JSON.parse(fs.readFileSync('./posts/' + file)));
+      }
+    }
+  });
+
+  var contents = { articles: posts };
+  return contents;
+};
+
 gulp.task('render_content', function(cb) {
   // Copy assets to dist folder
   gulp.src(['./assets/**/*']).pipe(gulp.dest('./build/assets/'));
   gulp.src(['pages/**/*.yml']).pipe(gulp.dest('./build/'));
 
-  
   //Render nunjucks to html
   gulp
     .src('pages/**/*.+(html|njk)')
@@ -32,12 +50,12 @@ gulp.task('render_content', function(cb) {
     .pipe(
       data(function() {
         var posts = [];
-        var folder = './posts';
+        var postsfolder = './posts';
 
-        var files = fs.readdirSync(folder);
+        var postsfiles = fs.readdirSync(postsfolder);
 
-        files.forEach(file => {
-          let fileStat = fs.statSync(folder + '/' + file).isDirectory();
+        postsfiles.forEach(file => {
+          let fileStat = fs.statSync(postsfolder + '/' + file).isDirectory();
           if (!fileStat) {
             if (file.includes('json')) {
               arr.push(JSON.parse(fs.readFileSync('./posts/' + file)));
