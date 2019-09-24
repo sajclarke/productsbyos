@@ -15,3 +15,23 @@ collections:
       - { name: title, label: Title }
       - { name: body, label: Body, widget: text }
       - { name: photo, label: Photo, widget: image }
+  - name: staff
+    label: Staff
+    folder: staff
+    extension: json
+    widget: 'list'
+    create: true
+    fields:
+      - { name: role, label: Role }
+      - { name: fullname, label: FullName, widget: text }
+      - { name: photo, label: Photo, widget: image }
+  - name: products
+    label: Products
+    folder: products
+    extension: json
+    widget: 'list'
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: body, label: Description, widget: text }
+      - { name: photo, label: Photo, widget: image }
